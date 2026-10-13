@@ -79,4 +79,24 @@ class ShippedTest {
                 () -> new Shipped("TR12345", null)
         );
     }
+
+    /**
+     * Перевірка трек-номера, який містить
+     * лише символи табуляції або нового рядка.
+     */
+    @Test
+    void testWhitespaceTrackingCode() {
+        LocalDate date = LocalDate.of(2026, 10, 13);
+
+        assertAll(
+                () -> assertThrows(
+                        IllegalArgumentException.class,
+                        () -> new Shipped("\t", date)
+                ),
+                () -> assertThrows(
+                        IllegalArgumentException.class,
+                        () -> new Shipped("\n", date)
+                )
+        );
+    }
 }

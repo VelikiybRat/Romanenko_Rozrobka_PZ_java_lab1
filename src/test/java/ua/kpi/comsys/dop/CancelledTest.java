@@ -53,4 +53,22 @@ class CancelledTest {
                 )
         );
     }
+
+    /**
+     * Перевірка причини скасування, яка містить
+     * лише символи табуляції або нового рядка.
+     */
+    @Test
+    void testWhitespaceReason() {
+        assertAll(
+                () -> assertThrows(
+                        IllegalArgumentException.class,
+                        () -> new Cancelled("\t")
+                ),
+                () -> assertThrows(
+                        IllegalArgumentException.class,
+                        () -> new Cancelled("\n")
+                )
+        );
+    }
 }

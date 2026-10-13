@@ -6,30 +6,29 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- * Модульні тести для запису Pending.
- *
- * Перевіряють створення статусу очікування
- * та його належність до ієрархії OrderStatus.
+ * Тести для запису Pending.
  */
 class PendingTest {
 
     /**
-     * Перевірка створення запису Pending.
+     * Два записи Pending без полів повинні бути рівними.
      */
     @Test
-    void testPendingCreation() {
-        Pending pending = new Pending();
+    void testPendingEquality() {
+        Pending first = new Pending();
+        Pending second = new Pending();
 
-        assertNotNull(pending);
+        assertEquals(first, second);
+        assertEquals(first.hashCode(), second.hashCode());
     }
 
     /**
-     * Перевірка реалізації інтерфейсу OrderStatus.
+     * Перевірка належності до OrderStatus.
      */
     @Test
     void testPendingImplementsOrderStatus() {
-        OrderStatus status = new Pending();
+        Pending pending = new Pending();
 
-        assertInstanceOf(Pending.class, status);
+        assertInstanceOf(OrderStatus.class, pending);
     }
 }

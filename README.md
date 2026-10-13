@@ -91,7 +91,7 @@ Romanenko_Lab1_java/
 
 ## Середовище та технології
 
-- **Java:** JDK 25; цільовий рівень компіляції — Java 23 (`maven.compiler.release=23`).
+- **Java:** JDK 25; цільовий рівень компіляції — Java 21 (`maven.compiler.release=21`).
 - **Система збирання:** Apache Maven.
 - **Тестування:** JUnit Jupiter 5.11.4.
 - **Покриття:** JaCoCo Maven Plugin 0.8.15.

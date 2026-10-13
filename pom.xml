@@ -15,8 +15,8 @@
     <name>Romanenko Lab 1 - DOP</name>
 
     <properties>
-        <!-- Компіляція під Java 23 -->
-        <maven.compiler.release>23</maven.compiler.release>
+        <!-- Компіляція під Java 21 -->
+        <maven.compiler.release>21</maven.compiler.release>
 
         <!-- Кодування вихідних файлів -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
